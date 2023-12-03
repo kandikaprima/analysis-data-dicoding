@@ -9,8 +9,8 @@ st.set_page_config(layout="wide")
 st.header("Air Quality Dataset Analysis")
 
 ##Read Data
-Aotizhongxin = pd.read_csv('PRSA_Data_20130301-20170228/PRSA_Data_Aotizhongxin_20130301-20170228.csv',usecols = ['year','month','RAIN','TEMP'])
-Changping = pd.read_csv('PRSA_Data_20130301-20170228/PRSA_Data_Changping_20130301-20170228.csv',usecols = ['year','month','RAIN','TEMP'])
+Aotizhongxin = pd.read_csv('PRSA_Data_Aotizhongxin_20130301-20170228.csv',usecols = ['year','month','RAIN','TEMP'])
+Changping = pd.read_csv('PRSA_Data_Changping_20130301-20170228.csv',usecols = ['year','month','RAIN','TEMP'])
 
 #Get Monthly Recap
 monthly_recap_rain_Aotizhongxin = Aotizhongxin.groupby(by='month')["RAIN"].mean().reset_index()
